@@ -6,7 +6,8 @@ import einops
 from einops import repeat
 
 from diffusers.configuration_utils import ConfigMixin, register_to_config
-from diffusers.loaders import FromOriginalModelMixin, PeftAdapterMixin
+from diffusers.models.modeling_utils import FromOriginalModelMixin
+from diffusers.models.modeling_peft import PeftAdapterMixin
 from diffusers.models.modeling_utils import ModelMixin
 from diffusers.utils import USE_PEFT_BACKEND, is_torch_version, logging, scale_lora_layers, unscale_lora_layers
 from diffusers.utils.torch_utils import maybe_allow_in_graph
